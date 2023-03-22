@@ -1,6 +1,7 @@
 .tam{
     width: 100%;
     max-width: 500px;
+    max-height: 500px;
 }
 .fondooliva{
     background-color: olive;
@@ -47,7 +48,11 @@
 /* search bar */
 
 .boxcenter{
-    width: 100%;
+    width: 70%;
     text-align:center;
 }
 
+.altura{
+  height: 281;
+
+}
