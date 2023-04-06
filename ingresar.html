@@ -18,6 +18,12 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ 
+    <style>
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
     
 </head>
 
@@ -57,51 +63,55 @@
 			</form>
 		</div>
 	</nav>
-    <div class="container" style="background-color: beige;">
 
-        <div class="row" style="margin-top: 20px;">
-            <div class="col-md-12">
-                <h2 style="text-align: center; color: #2c1cbd;">Registro usuario</h2>
+    <body>
+        <div class="container" style="background-color: white">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">Registro</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="inputFirstName">Nombre</label>
+                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Ingresa tu nombre" required>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="inputLastName">Apellido</label>
+                                            <input type="text" class="form-control" id="inputLastName" placeholder="Ingresa tu apellido" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword">Contraseña</label>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Ingresa tu contraseña" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                                <div class="text-center mt-3">
+                                    ¿Ya tienes una cuenta? <a href="iniciar sesion.html">Iniciar sesión</a>
+                                    <br><br>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <br><br>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <form action="#" method="post" enctype="multipart/form-data" name="Formulario">
-                    <label>Nombre: </label>
-                    <input type="text" name="nombre" required>
-                    <br><br>
-                    <label>Contraseña: </label>
-                    <input maxlength="20" type="password" name="clave" placeholder="Incluir Mayus y Signos">
-                    <br><br>
-                    <label>Fecha de Nacimiento: </label>
-                    <input type="date" name="f_nac">
-                    <br><br>
-                    <label>Rut: </label>
-                    <input maxlength="20" type="number" name="id" min="0">
-                    <span class="ejemplo">Ejemplo: 22.222.222-K</span>
-                    <br><br>
-                    <label>Genero: </label>
-                    <select name="genero">
-                        <option value="S" selected>Seleccione una opcion</option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Femenino</option>
-                        <option value="O">Otro</option>
-                    </select>
-                    <br><br>
-                    <input type="submit" value="Registrar">
-                    <br><br>
-                </form>
-            </div>
-            <div class="col-md-3"></div>
-        </div>
+    
 
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    </body>
+    </html>
