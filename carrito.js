@@ -87,6 +87,6 @@ function anadirProducto(nombre, precio, cantidad) {
 }
 
 // Ejemplo de uso de la función añadirProducto
-anadirProducto('Manzanas', 2.5, 3);
-anadirProducto('Peras', 3, 2);
-anadirProducto('Plátanos', 2, 4);
+anadirProducto('CocaCola', 1900, 3);
+anadirProducto('Milka', 2500, 2);
+anadirProducto('Doritos', 4000, 4);
