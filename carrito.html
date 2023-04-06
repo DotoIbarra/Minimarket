@@ -54,81 +54,6 @@
           margin-left: 10px;
         }
       </style>
-<script>
-
-let carrito = [];
-
-function agregarAlCarrito(nombre, precio) {
-  for (let i = 0; i < carrito.length; i++) {
-    if (carrito[i].nombre === nombre) {
-      carrito[i].cantidad++;
-      actualizarCarrito();
-      return;
-    }
-  }
-
-  carrito.push({
-    nombre: nombre,
-    precio: precio,
-    cantidad: 1
-  });
-
-  actualizarCarrito();
-}
-
-function quitarDelCarrito(nombre) {
-  for (let i = 0; i < carrito.length; i++) {
-    if (carrito[i].nombre === nombre) {
-      carrito.splice(i, 1);
-      actualizarCarrito();
-      return;
-    }
-  }
-}
-
-function cambiarCantidad(nombre, cantidad) {
-  for (let i = 0; i < carrito.length; i++) {
-    if (carrito[i].nombre === nombre) {
-      carrito[i].cantidad = cantidad;
-      actualizarCarrito();
-      return;
-    }
-  }
-}
-
-function actualizarCarrito() {
-  let total = 0;
-  let carritoElemento = document.querySelector("#carrito");
-
-  carritoElemento.innerHTML = "";
-
-  for (let i = 0; i < carrito.length; i++) {
-    let producto = carrito[i];
-    let precio = producto.precio * producto.cantidad;
-    total += precio;
-
-    let tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${producto.nombre}</td>
-      <td>$${producto.precio}</td>
-      <td>
-        <input type="number" value="${producto.cantidad}" min="1" max="100"
-          onchange="cambiarCantidad('${producto.nombre}', this.value)">
-      </td>
-      <td>
-        <button class="btn btn-danger" onclick="quitarDelCarrito('${producto.nombre}')">
-          Eliminar
-        </button>
-      </td>
-    `;
-
-    carritoElemento.appendChild(tr);
-  }
-
-  document.querySelector("#subtotal").textContent = "$" + total;
-}
-
-</script>
 
 </head>
 
@@ -174,8 +99,8 @@ function actualizarCarrito() {
           <table class="table">
             <thead>
               <tr>
-                <th>Producto</th>
-                <th>Precio</th>
+                <th>Productos</th>
+                <th>Precios</th>
                 <th>Cantidad</th>
                 <th>Acciones</th>
               </tr>
@@ -189,7 +114,7 @@ function actualizarCarrito() {
             <div class="card-body">
               <h5 class="card-title">Subtotal</h5>
               <p class="card-text" id="subtotal">$0</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <button class="btn btn-primary" id="comprarBtn">Comprar</button>
             </div>
           </div>
         </div>
