@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración</title>
+    <title>Pagar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -48,16 +48,13 @@
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: beige">Ingresar</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: beige">
 						<a class="dropdown-item" href="ingresar.html">Registrarse</a>
-						<a class="dropdown-item" href="iniciar sesion.html">Iniciar Sesion</a>
+						<a class="dropdown-item" href="iniciar sesion.html" >Iniciar Sesion</a>
 					</div>
                 <li class="nav-item active">
 					<a class="nav-link" href="carrito.html" style="color: beige;">Carrito</a>
 				</li>
                 <li class="nav-item active">
 					<a class="nav-link" href="perfil.html" style="color: beige;">Ver Perfil</a>
-				</li>
-                <li class="nav-item active">
-					<a class="nav-link" href="administracion.html" style="color: beige;">Ver panel de admin.</a>
 				</li>
 			</ul>
 			<form class="form-inline ml-auto" action="buscar.php" method="GET">
@@ -67,74 +64,93 @@
 		</div>
 	</nav>
     <div class="container" style="background-color: white">
-        <<h1>Panel de Administración</h1>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Nombre de usuario</th>
-              <th>Correo electrónico</th>
-              <th>Tipo de usuario</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Admin1</td>
-              <td>Admin1@example.com</td>
-              <td>Administrador</td>
-              <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Cliente1</td>
-              <td>Cliente1@example.com</td>
-              <td>Cliente</td>
-              <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Cliente2</td>
-              <td>Cliente2@example.com</td>
-              <td>Cliente</td>
-              <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <h2>Últimas compras</h2>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Compra #123456</h5>
-            <p class="card-text">Fecha de compra: 12/04/2023</p>
-            <ul>
-              <li>Coca cola - $3000</li>
-              <li>Milka - $2000</li>
-              <li>Doritos - $4000</li>
-            </ul>
-            <p class="card-text"><strong>Total: $9000</strong></p>
+        <h1 class="mb-3">Página de Pago</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="mb-3">Seleccione su método de pago:</h2>
+            <form>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="creditCard" checked>
+                <label class="form-check-label" for="creditCard">
+                  Tarjeta de crédito
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                <label class="form-check-label" for="paypal">
+                  PayPal
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="junaeb" value="junaeb">
+                <label class="form-check-label" for="junaeb">
+                  Junaeb
+                </label>
+              </div>
+              <div class="form-group mt-3">
+                <label for="cardNumber">Número de tarjeta:</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Ingrese el número de su tarjeta">
+              </div>
+              <div class="form-group">
+                <label for="expirationDate">Fecha de vencimiento:</label>
+                <input type="text" class="form-control" id="expirationDate" placeholder="MM/AA">
+              </div>
+              <div class="form-group">
+                <label for="securityCode">Código de seguridad:</label>
+                <input type="text" class="form-control" id="securityCode" placeholder="Ingrese el código de seguridad">
+              </div>
+              <button type="submit" class="btn btn-primary">Pagar</button>
+            </form>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Compra #123455</h5>
-            <p class="card-text">Fecha de compra: 10/04/2023</p>
-            <ul>
-              <li>Bilz - $1000</li>
-              <li>Cif - $1000</li>
-            </ul>
-            <p class="card-text"><strong>Total: $2000</strong></p>
-          </div>
-        </div>
-      </div>
-    
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
-</body>
-</html>
+          <div class="col-md-6">
+            <h2 class="mb-3">Resumen del pedido: #123456</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio unitario</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Coca cola</td>
+                  <td>3</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>Precio unitario</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr> 
+                  <td>Milka</td>
+                  <td>2</td>
+                  <td>$1000</td>
+                  <td>$2000</td>
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>Precio unitario</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                  <td>Doritos</td>
+                  <td>4</td>
+                  <td>$1000</td>
+                  <td>$4000</td>
+
+                  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    </body>
+    </html>

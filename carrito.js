@@ -90,3 +90,5 @@ function anadirProducto(nombre, precio, cantidad) {
 anadirProducto('CocaCola', 1000, 3);
 anadirProducto('Milka', 1000, 2);
 anadirProducto('Doritos', 1000, 4);
+
+
