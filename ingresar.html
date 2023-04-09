@@ -56,6 +56,9 @@
                 <li class="nav-item active">
 					<a class="nav-link" href="carrito.html" style="color: beige;">Carrito</a>
 				</li>
+                <li class="nav-item active">
+					<a class="nav-link" href="perfil.html" style="color: beige;">Ver Perfil</a>
+				</li>
 			</ul>
             <form class="form-inline ml-auto" action="buscar.php" method="GET">
 				<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" style="background-color: beige;">
@@ -74,31 +77,35 @@
                         <div class="card-body">
                             <form>
                                 <div class="form-row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="inputFirstName">Nombre</label>
-                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Ingresa tu nombre" required>
-                                        </div>
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label for="inputFirstName">Nombre</label>
+                                      <input type="text" class="form-control" id="inputFirstName" placeholder="Ingresa tu nombre" required>
                                     </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="inputLastName">Apellido</label>
-                                            <input type="text" class="form-control" id="inputLastName" placeholder="Ingresa tu apellido" required>
-                                        </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label for="inputLastName">Apellido</label>
+                                      <input type="text" class="form-control" id="inputLastName" placeholder="Ingresa tu apellido" required>
                                     </div>
+                                  </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail">Correo electrónico</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" required>
+                                  <label for="inputEmail">Correo electrónico</label>
+                                  <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword">Contraseña</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Ingresa tu contraseña" required>
+                                  <label for="inputPassword">Contraseña</label>
+                                  <input type="password" class="form-control" id="inputPassword" placeholder="Ingresa tu contraseña" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                                <a href="iniciar sesion.html" class="btn btn-primary">Registrarse</a>
+                              </form>
+                              
                                 <div class="text-center mt-3">
                                     ¿Ya tienes una cuenta? <a href="iniciar sesion.html">Iniciar sesión</a>
                                     <br><br>
+                                    <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+
                                 </div>
                             </div>
                             </form>
