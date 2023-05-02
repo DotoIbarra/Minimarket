@@ -76,32 +76,32 @@
                             <h4 class="mb-0">Registro</h4>
                         </div>
                         <div class="card-body">
-                            <form>
-                                <div class="form-row">
-                                  <div class="col">
-                                    <div class="form-group">
-                                      <label for="inputFirstName">Nombre</label>
-                                      <input type="text" class="form-control" id="inputFirstName" placeholder="Ingresa tu nombre" required>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="form-group">
-                                      <label for="inputLastName">Apellido</label>
-                                      <input type="text" class="form-control" id="inputLastName" placeholder="Ingresa tu apellido" required>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="inputEmail">Correo electrónico</label>
-                                  <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" required>
-                                </div>
-                                <div class="form-group">
-                                  <label for="inputPassword">Contraseña</label>
-                                  <input type="password" class="form-control" id="inputPassword" placeholder="Ingresa tu contraseña" required>
-                                </div>
-                                <a href="" class="btn btn-primary">Registrarse</a>
-                              </form>
-                              
+                          <form action="" method="POST" id="form">
+                            <div class="form">
+                              <div class="grupo">
+                                <input type="text" name="name" id="name" required>
+                                <span class="barra"></span>
+                                <label for="first_name">Nombre</label>
+                              </div>
+                              <div class="grupo">
+                                <input type="text" name="last_name" id="last_name" required>
+                                <span class="barra"></span>
+                                <label for="last_name">Apellido</label>
+                              </div>
+                              <div class="grupo">
+                                <input type="email" name="email" id="email" required>
+                                <span class="barra"></span>
+                                <label for="email">Email</label>
+                              </div>
+                              <div class="grupo">
+                                <input type="password" name="password" id="password" required>
+                                <span class="barra"></span>
+                                <label for="password">Password</label>
+                              </div>
+                              <button type="submit">Registrarse</button>
+                              <p class="warnings" id="warnings"></p>
+                            </div>
+                          </form>
                                 <div class="text-center mt-3">
                                     ¿Ya tienes una cuenta? <a href="iniciar sesion.html">Iniciar sesión</a>
                                     <br><br>
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </div>
-    
+        <script src="js/registroEinicio.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
